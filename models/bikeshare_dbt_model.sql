@@ -52,9 +52,9 @@ dbt_bikeshare_station_region_info as (
 select 
 trips.trip_id,
 trips.duration_sec,
-trips.start_date,
+date(trips.start_date) as start_date,
 trips.start_station_id,
-trips.end_date,
+date(trips.end_date) as end_date,
 trips.end_station_id,
 trips.bike_number,
 trips.subscriber_type,
